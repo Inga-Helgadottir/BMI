@@ -1,6 +1,10 @@
 package FunctionLayer;
 
+import DBAccess.InfoMapper;
+import DBAccess.SportMapper;
 import DBAccess.UserMapper;
+
+import java.util.List;
 
 /**
  * The purpose of LogicFacade is to...
@@ -18,4 +22,11 @@ public class LogicFacade {
         return user;
     }
 
+    public static List<Sport> getAllSports() throws LoginSampleException {
+        return SportMapper.getAllSports();
+    }
+
+    public static List<Info> getAllInfos() throws LoginSampleException {
+        return InfoMapper.getAllInfos();
+    }
 }

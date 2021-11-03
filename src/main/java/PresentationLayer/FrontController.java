@@ -34,19 +34,16 @@ public class FrontController extends HttpServlet {
             throws ServletException, IOException {
 
         try {
-            Command action = Command.from(request);
-            String view = action.execute(request, response);
-            request.getRequestDispatcher("/WEB_INF/" + view + ".jsp").forward(request, response);
-//            request.setCharacterEncoding("UTF-8");
-//            response.setCharacterEncoding("UTF-8");
-//
-//            Command action = Command.from( request );
-//            String view = action.execute( request, response );
-//            if (view.equals("index")){
-//                request.getRequestDispatcher(view + ".jsp").forward(request, response);
-//            } else {
-//                request.getRequestDispatcher("/WEB-INF/" + view + ".jsp").forward(request, response);
-//            }
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
+
+            Command action = Command.from( request );
+            String view = action.execute( request, response );
+            if (view.equals("index")){
+                request.getRequestDispatcher(view + ".jsp").forward(request, response);
+            } else {
+                request.getRequestDispatcher("/WEB-INF/" + view + ".jsp").forward(request, response);
+            }
         } catch ( UnsupportedEncodingException | LoginSampleException ex ) {
             request.setAttribute( "error", ex.getMessage() );
             request.getRequestDispatcher( "login.jsp" ).forward( request, response );
