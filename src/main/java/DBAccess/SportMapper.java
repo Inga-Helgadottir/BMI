@@ -2,7 +2,6 @@ package DBAccess;
 
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.Sport;
-import FunctionLayer.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

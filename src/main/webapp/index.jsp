@@ -51,15 +51,8 @@
                     <label for="exampleFormControlSelect1">Angiv din primære idræt:</label>
                     <select class="form-control" name="sport" id="exampleFormControlSelect1">
                         <c:forEach var="sportsItem" items="${applicationScope.sportList}">
-<%------------------------------------------------------------FIX sports_is----------------------------------------------%>
-                            <option value="${sportsItem.sports_is}">${sportsItem.name}</option>
+                            <option value="${sportsItem.sports_id}">${sportsItem.name}</option>
                         </c:forEach>
-<%--                        <option value="1">Jogging</option>--%>
-<%--                        <option value="2">Fodbold</option>--%>
-<%--                        <option value="3">Håndbold</option>--%>
-<%--                        <option value="4">Gymnastik</option>--%>
-<%--                        <option value="5">Yoga</option>--%>
-<%--                        <option value="6">Andet</option>--%>
                     </select>
                 </div>
 
@@ -73,18 +66,6 @@
                     </div>
 
                 </c:forEach>
-<%--                <div class="form-check">--%>
-<%--                    <input class="form-check-input" type="checkbox" name="info" value="2" id="defaultCheck2">--%>
-<%--                    <label class="form-check-label" for="defaultCheck1">--%>
-<%--                        Jeg har et sommerhus--%>
-<%--                    </label>--%>
-<%--                </div>--%>
-<%--                <div class="form-check">--%>
-<%--                    <input class="form-check-input" type="checkbox" name="info" value="3" id="defaultCheck3">--%>
-<%--                    <label class="form-check-label" for="defaultCheck1">--%>
-<%--                        Jeg har et kæledyr--%>
-<%--                    </label>--%>
-<%--                </div>--%>
 
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Beregn BMI</button>

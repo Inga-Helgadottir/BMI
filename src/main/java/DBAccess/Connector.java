@@ -40,8 +40,11 @@ public class Connector {
         } else {
             // Localhost
             URL = "jdbc:mysql://localhost:3306/useradmin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            USERNAME = "dat2user";
-            PASSWORD = "password";
+//            USERNAME = "dat2user";
+//            PASSWORD = "password";
+//            URL = "jdbc:mysql://localhost:3306/Bibliotek?serverTimezone=CET&useSSL=false";
+            USERNAME = "sih";
+            PASSWORD = "mysqlPasswordSIH995";
         }
     }
 
