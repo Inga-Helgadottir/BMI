@@ -8,7 +8,7 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/docs" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/target/site/javadocs" />
     <option name="OTHER_OPTIONS" value="utf8 -docencoding utf8 -charset utf8" />
     <option name="LOCALE" value="da_DK" />
   </component>
