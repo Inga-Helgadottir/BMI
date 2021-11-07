@@ -69,7 +69,11 @@
 
                 </c:forEach>
 
+<<<<<<< HEAD
                 <div class="text-center mt-3">
+=======
+                <div class="text-center">
+>>>>>>> c65d3bd38bf41c4a33a7d6b7e0d16faa25224b8b
                     <button type="submit" class="btn btn-primary">Beregn BMI</button>
                 </div>
             </form>

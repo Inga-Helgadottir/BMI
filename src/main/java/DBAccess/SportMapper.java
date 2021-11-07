@@ -30,6 +30,7 @@ public class SportMapper {
         }
         return sportList;
     }
+<<<<<<< HEAD
 
     public static void updateSport(int sport_id, String name) throws LoginSampleException {
         int newId = 0;
@@ -64,4 +65,6 @@ public class SportMapper {
             }
         }
     }
+=======
+>>>>>>> c65d3bd38bf41c4a33a7d6b7e0d16faa25224b8b
 }
