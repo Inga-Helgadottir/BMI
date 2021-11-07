@@ -12,12 +12,14 @@
         request.getServletContext().setAttribute("infoList", Initializer.getInfoList());
     }
 %>
-<!-- i gang med opgave 19 BMI forms: Initialisering af datastrukturer og dynamisk generering af formular (problem 16:00) -->
+<!-- i gang med opgave 23 -->
     <div class="row">
 
         <div class="col-md-4"></div>
 
         <div class="col-md-4">
+
+            <p class="text-center"><a href="FrontController?target=redirect&destination=login">Log ind</a> </p>
 
             <h1 class="text-center">BMI beregner</h1>
 
@@ -47,25 +49,18 @@
                     </label>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-3">
                     <label for="exampleFormControlSelect1">Angiv din primære idræt:</label>
                     <select class="form-control" name="sport" id="exampleFormControlSelect1">
                         <c:forEach var="sportsItem" items="${applicationScope.sportList}">
-<%------------------------------------------------------------FIX sports_is----------------------------------------------%>
-                            <option value="${sportsItem.sports_is}">${sportsItem.name}</option>
+                            <option value="${sportsItem.sports_id}">${sportsItem.name}</option>
                         </c:forEach>
-<%--                        <option value="1">Jogging</option>--%>
-<%--                        <option value="2">Fodbold</option>--%>
-<%--                        <option value="3">Håndbold</option>--%>
-<%--                        <option value="4">Gymnastik</option>--%>
-<%--                        <option value="5">Yoga</option>--%>
-<%--                        <option value="6">Andet</option>--%>
                     </select>
                 </div>
 
                 <c:forEach var="infoItem" items="${applicationScope.infoList}">
 
-                    <div class="form-check">
+                    <div class="form-check mt-2">
                         <input class="form-check-input" type="checkbox" name="info" value="${infoItem.info_id}" id="defaultCheck${infoItem.info_id}">
                         <label class="form-check-label" for="defaultCheck${infoItem.info_id}">
                            ${infoItem.name}
@@ -73,20 +68,8 @@
                     </div>
 
                 </c:forEach>
-<%--                <div class="form-check">--%>
-<%--                    <input class="form-check-input" type="checkbox" name="info" value="2" id="defaultCheck2">--%>
-<%--                    <label class="form-check-label" for="defaultCheck1">--%>
-<%--                        Jeg har et sommerhus--%>
-<%--                    </label>--%>
-<%--                </div>--%>
-<%--                <div class="form-check">--%>
-<%--                    <input class="form-check-input" type="checkbox" name="info" value="3" id="defaultCheck3">--%>
-<%--                    <label class="form-check-label" for="defaultCheck1">--%>
-<%--                        Jeg har et kæledyr--%>
-<%--                    </label>--%>
-<%--                </div>--%>
 
-                <div class="text-center">
+                <div class="text-center mt-3">
                     <button type="submit" class="btn btn-primary">Beregn BMI</button>
                 </div>
             </form>

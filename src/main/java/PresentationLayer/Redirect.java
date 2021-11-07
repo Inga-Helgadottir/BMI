@@ -13,6 +13,8 @@ public class Redirect extends Command{
         switch (destination){
             case "index": request.setAttribute("message", "Alt er godt!"); break;
             case "about": request.setAttribute("message", "Alt er super godt!"); break;
+            case "login": break;
+            case "kategorier": break;
             default: request.setAttribute("message", "Denne side findes ikke!");
         }
 

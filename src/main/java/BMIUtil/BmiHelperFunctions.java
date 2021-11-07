@@ -1,5 +1,9 @@
 package BMIUtil;
 
+import FunctionLayer.Sport;
+
+import java.util.List;
+
 public class BmiHelperFunctions {
     public static Double calcBmi(Double height, Double weight){
         return weight / (height * height) * 100 *100;
@@ -18,5 +22,15 @@ public class BmiHelperFunctions {
         }
 
         return kategori;
+    }
+
+    public static Sport getSportCategoryById(int id){
+        List<Sport> sportList = Initializer.getSportList();
+        for (Sport sport : sportList){
+            if(sport.getSports_id() == id){
+                return sport;
+            }
+        }
+        return null;
     }
 }

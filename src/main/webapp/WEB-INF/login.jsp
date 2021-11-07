@@ -5,27 +5,18 @@
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="../includes/header.inc"%>
 
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome page</title>
-    </head>
-    <body>
-        <h1>Welcome to Sem 2</h1>
-        
         <table>
             <tr><td>Login</td>
                 <td>
                     <form name="login" action="FrontController" method="POST">
                         <input type="hidden" name="target" value="login">
                         Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
+                        <input type="text" name="email" placeholder="someone@nowhere.com">
                         <br>
                         Password:<br>
-                        <input type="password" name="password" value="sesam">
+                        <input type="password" name="password" placeholder="sesam">
                         <br>
                         <input type="submit" value="Submit">
                     </form>
@@ -35,13 +26,13 @@
                     <form name="register" action="FrontController" method="POST">
                         <input type="hidden" name="target" value="register">
                         Email:<br>
-                        <input type="text" name="email" value="someone@nowhere.com">
+                        <input type="text" name="email" placeholder="someone@nowhere.com">
                         <br>
                         Password:<br>
-                        <input type="password" name="password1" value="sesam">
+                        <input type="password" name="password1" placeholder="sesam">
                         <br>
                         Retype Password:<br>
-                        <input type="password" name="password2" value="sesam">
+                        <input type="password" name="password2" placeholder="sesam">
                         <br>
                         <input type="submit" value="Submit">
                     </form>
@@ -53,5 +44,4 @@
            <h2>Error ! </h2>
             ${requestScope.error}
         </c:if>
-    </body>
-</html>
+<%@include file="../includes/footer.inc"%>

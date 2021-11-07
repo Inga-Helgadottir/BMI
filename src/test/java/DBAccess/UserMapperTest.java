@@ -19,10 +19,10 @@ public class UserMapperTest {
 //    (4,'someone@nowhere.com','sesam','customer');
 
     private static Connection testConnection;
-    private static String USER = "testinguser";
-    private static String USERPW = "try1try2tryAgain";
+    private static String USER = "sih";
+    private static String USERPW = "mysqlPasswordSIH995";
     private static String DBNAME = "useradminTest";
-    private static String HOST = "46.101.253.149";
+    private static String HOST = "localhost";
 
     @Before
     public void setUp() {

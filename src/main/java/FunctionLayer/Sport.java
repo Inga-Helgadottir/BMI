@@ -1,20 +1,20 @@
 package FunctionLayer;
 
 public class Sport {
-    private int sports_is;
+    private int sports_id;
     private String name;
 
-    public Sport(int sports_is, String name) {
-        this.sports_is = sports_is;
+    public Sport(int sports_id, String name) {
+        this.sports_id = sports_id;
         this.name = name;
     }
 
-    public int getSports_is() {
-        return sports_is;
+    public int getSports_id() {
+        return sports_id;
     }
 
-    public void setSports_is(int sports_is) {
-        this.sports_is = sports_is;
+    public void setSports_id(int sports_id) {
+        this.sports_id = sports_id;
     }
 
     public String getName() {
